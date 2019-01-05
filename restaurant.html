@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <!-- Main CSS file -->
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <title>Restaurant Info</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="inside">
+  <!-- Beginning header -->
+  <header>
+    <!-- Beginning nav -->
+    <nav>
+      <h1 tabindex=0 class="title"><a href="/">Restaurant Reviews</a></h1>
+      <!-- Give a user the ability to move to main content -->
+      <a href="#restaurant-name" class="skipLink">Click to go to main content</a>
+    </nav>
+    <!-- Beginning breadcrumb -->
+    <ul id="breadcrumb" >
+      <li><a href="/">Home</a></li>
+    </ul>
+    <!-- End breadcrumb -->
+    <!-- End nav -->
+  </header>
+  <!-- End header -->
+
+  <!-- Beginning main -->
+  <main id="maincontent">
+    <!-- Beginning map -->
+    <section id="map-container">
+      <div id="map"></div>
+    </section>
+    <!-- End map -->
+    <section id="restaurant-container">
+      <h1 tabindex=0 id="restaurant-name"></h1>
+      <img tabindex=0 id="restaurant-img">
+      <p tabindex=0 id="restaurant-cuisine"></p>
+      <p tabindex=0 id="restaurant-address"></p>
+      <table tabindex=0 id="restaurant-hours"></table>
+    </section>
+    <!-- Beginning reviews -->
+    <section id="reviews-container" tabindex=0>
+      <ul id="reviews-list" tabindex=0></ul>
+    </section>
+    <!-- End reviews -->
+  </main>
+  <!-- End main -->
+
+  <!-- footer section -->
+  <footer id="footer">
+    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  </footer>
+  <!-- End footer -->
+
+  <!-- Beginning scripts -->
+  <!-- Database helpers -->
+  <script type="text/javascript" src="js/dbhelper.js"></script>
+  <!-- Main javascript file -->
+  <script type="text/javascript" src="js/restaurant_info.js"></script>
+  <!-- My API key -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHFTB4uigzlaj1D0S-33CLpt2_DEU8t0o&libraries=places&callback=initMap"></script>
+     <!-- service worker registration script -->
+  <script type="application/javascript" src="/sw-reg.js"></script>
+  <!-- End scripts -->
+
+</body>
+
+</html>
